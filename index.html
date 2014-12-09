@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script>
+    var Main = function($scope){
+        $scope.users = [
+            {"name": "shohei"},
+            {"name": "hoge"}
+        ]
+    }
+    </script>
+</head>
+<body>
+    <div ng-controller="Main">
+    <input type="text" name="user" ng-model="user">
+    <p>{{user}}</p>
+    <ul>
+        <li ng-repeat="user in users">{{user.name}}</li>
+    </ul>
+    </div>
+    
+</body>
+</html>
